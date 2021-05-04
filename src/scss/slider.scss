@@ -1,0 +1,28 @@
+.slider {
+  padding: 108px 0 98px;
+
+  .owl-carousel .owl-item img {
+    width: 750px;
+    margin: 0 auto;
+  }
+
+  .owl-nav .owl-prev {
+    background: url("../images/slide/prev.png") center/cover no-repeat;
+    height: 50px;
+    width: 31px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+  }
+
+  .owl-nav .owl-next {
+    background: url("../images/slide/next.png") center/cover no-repeat;
+    height: 50px;
+    width: 31px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+
+}

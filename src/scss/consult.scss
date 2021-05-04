@@ -1,0 +1,55 @@
+.consult {
+  padding: 86px 0 92px 0;
+  background: url("../images/consult/bg2@1X.png") no-repeat;
+  &__title{
+    @include text($Museo700, 36px, #fff);
+    text-transform: uppercase;
+  }
+  &__subtitle{
+    @include text($Museo500, 20PX, #fff);
+    margin: 60px 0 35px 0;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 255px;
+  }
+  &__label{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+
+
+    &:last-child{
+      margin-bottom: 20px;
+    }
+  }
+  &__input{
+    @include text($Museo300, 14px, #4B4B4B);
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 21px ;
+
+  }
+  &__btn{
+    width: 100%;
+    border-radius: 5px;
+    height: 55px;
+    background: #C70101;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    transition-duration: 0.8s;
+    &:hover{
+      background: #ffffff;
+      color: #C70101;
+      transition-duration: 0.8s;
+    }
+
+  }
+}
