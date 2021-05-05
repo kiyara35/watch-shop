@@ -123,40 +123,32 @@ $(document).ready(function () {
         $('.overlay ,.popup__consultation').fadeIn('slow')
     });
 
-
     $('.consult__btn').on('click', function (e) {
         e.preventDefault();
         $('.overlay , .popup__thanks').fadeIn('slow');
         $('.popup__order, .popup__consultation').fadeOut(1)
     });
 
-    $(".catalog__btn").each(function (item) {
+    $('.catalog__btn').each(function (item) {
         $(this).on('click', function () {
             $('.overlay , .popup__order').fadeIn('slow')
-            $('.popup__order-subtitle').text($('h3.catalog__front-title').eq(item).text())
-        })
+            $('.popup__order-subtitle').text($('.catalog__front-title').eq(item).text())
+        });
     });
 
-    $('.popup__close, .overlay').on('click', function () {
+    $('.popup__close').on('click', function () {
         $('.overlay, .popup__consultation, .popup__thanks, .popup__order').fadeOut('slow')
-
     });
 
+    $('.overlay').on('click', function (e) {
+        if(e.target.className === 'overlay' ){
+            $('.overlay, .popup__consultation, .popup__thanks, .popup__order').fadeOut('slow')
+        }
+    });
 });
 
 
-// $('.home__button, .consult__btn' ).on('click', function () {
-//     $('.overlay, #consultation').fadeIn()
-// })
-// $('.modal__close').on('click',function() {
-//     $('.overlay, #consultation, #order, #thanks').fadeOut()
-// });
-// $('.btn_mini').on('click',function () {
-//     $('.overlay, #order').fadeIn()
-// });
-// $('.consult__btn').on('click',function () {
-//     $('.overlay, #thanks').fadeIn()
-// });
+
 
 
 
